@@ -1,0 +1,31 @@
+{
+	"parent": "valley:exploration/druids_staff",
+	"display": {
+		"title": {
+			"text": "Statue of Storms"
+		},
+		"icon": {
+			"item": "valley:storm_totem"
+		},
+		"description": {
+			"text": "Summon a thunderstorm"
+		}
+	},
+	"criteria": {
+		"summon_storm": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:storm_totem"
+					]
+				}
+			}
+		}
+	},
+	"requirements": [
+		[
+			"summon_storm"
+		]
+	]
+}

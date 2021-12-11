@@ -1,0 +1,33 @@
+{
+	"parent": "valley:exploration/knife",
+	"display": {
+		"title": {
+			"text": "Beginner Anthropologist"
+		},
+		"icon": {
+			"item": "valley:climbing_axe"
+		},
+		"description": {
+			"text": "Craft a Climbing Axe"
+		}
+	},
+	"criteria": {
+		"climbing_axe": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:climbing_axe"
+						]
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"climbing_axe"
+		]
+	]
+}

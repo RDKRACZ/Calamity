@@ -1,0 +1,33 @@
+{
+	"parent": "valley:exploration/knife",
+	"display": {
+		"title": {
+			"text": "A Harmless Alternative"
+		},
+		"icon": {
+			"item": "valley:book_cover"
+		},
+		"description": {
+			"text": "Craft a Book Cover out of Plant Fiber."
+		}
+	},
+	"criteria": {
+		"starfish": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:book_cover"
+						]
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"starfish"
+		]
+	]
+}

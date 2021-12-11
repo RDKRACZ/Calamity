@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "c:dough"
+    },
+    {
+      "item": "minecraft:chicken"
+    },
+    {
+      "tag": "c:eggs"
+    },
+    {
+      "tag": "c:onion"
+    },
+    {
+      "item": "valley:milk_bottle"
+    }
+  ],
+  "result": {
+    "item": "valley:dumpling",
+    "count": 3
+  }
+}

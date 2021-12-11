@@ -5,16 +5,16 @@
       "item": "minecraft:pumpkin"
     },
     {
-      "item": "valley:onion"
+      "tag": "c:onion"
     },
     {
-      "item": "valley:onion"
+      "tag": "c:onion"
     },
     {
-      "item": "valley:onion"
+      "tag": "c:onion"
     },
     {
-      "item": "valley:salt"
+      "tag": "c:salt"
     },
     {
       "item": "minecraft:brown_mushroom"
@@ -25,6 +25,6 @@
   ],
   "result": {
     "item": "valley:stuffed_onion",
-    "count": 1
+    "count": 3
   }
 }

@@ -11,6 +11,7 @@ import net.minecraft.client.color.world.BiomeColors;
 import net.minecraft.client.render.RenderLayer;
 
 import static net.linkle.valley.Registry.Initializers.Plants.*;
+import static net.linkle.valley.Registry.Initializers.Aquatic.*;
 import static net.linkle.valley.Registry.Initializers.StoneBlocks.*;
 import static net.linkle.valley.Registry.Initializers.Crops.*;
 import static net.linkle.valley.Registry.Initializers.Furniture.*;
@@ -27,21 +28,21 @@ public class ClientModInitFix implements ClientModInitializer {
         Entities.initializeClient();
         renderLayer();
 
-        ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> {
-            return tintIndex == 1 ? BiomeColors.getFoliageColor(view, pos) : -1;
-        }, APPLE_LEAVES);
+        ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) ->
+            tintIndex == 1 ? BiomeColors.getFoliageColor(view, pos) : -1
+        , APPLE_LEAVES);
 
-        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> {
-            return tintIndex == 1 ? 4764952 : -1;
-        }, APPLE_LEAVES);
+        ColorProviderRegistry.ITEM.register((stack, tintIndex) ->
+            tintIndex == 1 ? 4764952 : -1
+        , APPLE_LEAVES);
 
-        ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> {
-            return tintIndex == 1 ? BiomeColors.getFoliageColor(view, pos) : -1;
-        }, APPLE_LEAVES_EMPTY);
+        ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) ->
+            tintIndex == 1 ? BiomeColors.getFoliageColor(view, pos) : -1
+        , APPLE_LEAVES_EMPTY);
 
-        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> {
-            return tintIndex == 1 ? 4764952 : -1;
-        }, APPLE_LEAVES_EMPTY);
+        ColorProviderRegistry.ITEM.register((stack, tintIndex) ->
+            tintIndex == 1 ? 4764952 : -1
+        , APPLE_LEAVES_EMPTY);
     }
     
     private static void renderLayer() {
@@ -133,6 +134,11 @@ public class ClientModInitFix implements ClientModInitializer {
         cullouts.add(WEAPING_SWAMP_WILLOW);
         cullouts.add(REDWOOD_SORREL);
         cullouts.add(DANDELION_PUFF);
+        cullouts.add(PANFLOWER);
+        cullouts.add(HONEY_CLUSTER);
+        cullouts.add(FLOWERING_CACTUS);
+        cullouts.add(PEPPER_CROP_BLOCK);
+        cullouts.add(EGGPLANT_CROP_BLOCK);
         cullouts.add(ROCK_PILE);
         cullouts.add(RED_PILE);
         cullouts.add(BLUE_PILE);
@@ -143,8 +149,10 @@ public class ClientModInitFix implements ClientModInitializer {
         cullouts.add(SNOW_YAM);
         cullouts.add(WINTER_ROOT);
         cullouts.add(SNOW_ROCK_PILE);
-        cullouts.add(MOSSY_VINE);
-        cullouts.add(MOSSY_VINE_PLANT);
+        cullouts.add(MOSSY_VINES);
+        cullouts.add(MOSSY_VINES_PLANT);
+        cullouts.add(DRY_VINES);
+        cullouts.add(DRY_VINES_PLANT);
         cullouts.add(JUNGLE_BUSH);
         cullouts.add(SWAMP_BUSH);
         cullouts.add(JUNGLE_CAP);
@@ -157,7 +165,6 @@ public class ClientModInitFix implements ClientModInitializer {
         cullouts.add(ICE_ROSE);
         cullouts.add(ORANGE_FERN);
         cullouts.add(ORANGE_BEAUTY);
-        cullouts.add(AMERANTH_BLOCK);
         cullouts.add(APPLE_LEAVES);
         cullouts.add(APPLE_SAPLING);
         cullouts.add(CROCUS);
@@ -175,15 +182,9 @@ public class ClientModInitFix implements ClientModInitializer {
         cullouts.add(MANDRAKE_CROP_BLOCK);
         cullouts.add(CRYSTAL_CROP_BLOCK);
 
-        translucents.add(HANGING);
-        translucents.add(HANGING_F);
-        translucents.add(HANGING_R);
-        cullouts.add(HANGING_D);
-        cullouts.add(HANGING_A);
-        cullouts.add(HANGING_E);
+        cullouts.add(HANGING);
 
         translucents.add(CRYSTAL);
-        translucents.add(FROZEN_FOSSIL);
 
         cullouts.add(ROPE_BRIDGE);
         cullouts.add(ROPE_BRIDGE_ANCHOR);
@@ -250,28 +251,18 @@ public class ClientModInitFix implements ClientModInitializer {
         cullouts.add(STUMP_MOREL);
 
         cullouts.add(APPLE_LEAVES_EMPTY);
-        cullouts.add(KEG);
-
-        cullouts.add(STUFFY_BROWN);
-        cullouts.add(STUFFY_WHITE);
 
         cullouts.add(CHAIN_C);
         cullouts.add(CHAIN_G);
         cullouts.add(CHAIN_N);
         
-        cullouts.add(GOLEM_R);
-        cullouts.add(GOLEM_W);
-        cullouts.add(GOLEM_I);
-        
         cullouts.add(CAMPFIRE_RING);
-        
-        translucents.add(LOGPILE);
 
         cullouts.add(GIANT_RED);
         cullouts.add(GIANT_BROWN);
         cullouts.add(SPIDER_EGG_BLOCK);
+        cullouts.add(RED_SEAGRASS);
         translucents.add(BRAZIER_METAL);
-        translucents.add(COIN_STACK);
 
         // Remapping block's render layer. This code should always be last!
         var layerMap = BlockRenderLayerMap.INSTANCE;

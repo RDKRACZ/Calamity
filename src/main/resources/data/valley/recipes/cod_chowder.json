@@ -8,10 +8,10 @@
       "item": "valley:milk_bottle"
     },
     {
-      "item": "valley:salt"
+      "tag": "c:salt"
     },
     {
-      "item": "valley:maize_crop"
+      "tag": "c:mollusks"
     },
     {
       "item": "minecraft:potato"

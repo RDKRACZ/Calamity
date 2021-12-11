@@ -1,0 +1,33 @@
+{
+	"parent": "valley:exploration/improvisor",
+	"display": {
+		"title": {
+			"text": "Survivalist"
+		},
+		"icon": {
+			"item": "valley:iron_knife"
+		},
+		"description": {
+			"text": "Use a Knife to gather Fiber for Rope"
+		}
+	},
+	"criteria": {
+		"fiber": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:fiber"
+						]
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"fiber"
+		]
+	]
+}

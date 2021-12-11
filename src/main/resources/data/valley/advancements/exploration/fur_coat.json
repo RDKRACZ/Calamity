@@ -1,0 +1,33 @@
+{
+	"parent": "valley:exploration/improvisor",
+	"display": {
+		"title": {
+			"text": "Frozen Comfort"
+		},
+		"icon": {
+			"item": "valley:fur_chestplate"
+		},
+		"description": {
+			"text": "Make a Fur Cloak"
+		}
+	},
+	"criteria": {
+		"fur_coat": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:fur_chestplate"
+						]
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"fur_coat"
+		]
+	]
+}

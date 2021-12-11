@@ -10,13 +10,13 @@
       "item": "valley:salmon_roll"
     },
     "P": {
-      "item": "minecraft:kelp"
+      "item": "valley:dried_seaweed"
     },
     "C": {
       "item": "minecraft:carrot"
     },
     "T": {
-      "item": "valley:rice_item"
+      "tag": "c:rice"
     },
     "B": {
       "item": "valley:bento_block"

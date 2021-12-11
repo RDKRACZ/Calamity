@@ -1,0 +1,33 @@
+{
+	"parent": "valley:exploration/root",
+	"display": {
+		"title": {
+			"text": "Spirit of the Woods"
+		},
+		"icon": {
+			"item": "valley:null_totem"
+		},
+		"description": {
+			"text": "Make a Totem"
+		}
+	},
+	"criteria": {
+		"null_totem": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:null_totem"
+						]
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"null_totem"
+		]
+	]
+}

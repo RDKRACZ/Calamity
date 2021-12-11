@@ -103,10 +103,10 @@ public class Furniture {
     public static final Block B_STAIRS = new BrownStairsBlock();
     public static final Block B_SLAB = new BrownSlabBlock();
     public static final Block SCREEN = new ScreenBlock();
-    public static final Block BRAZIER = new BrazierBlock(15);
-    public static final Block SOUL_BRAZIER = new BrazierBlock(10);
-    public static final Block COPPER_BRAZIER = new BrazierBlock(13);
-    public static final Block BLAZE_BRAZIER = new BrazierBlock(15);
+    public static final Block BRAZIER = new BrazierBlock(15, 1);
+    public static final Block SOUL_BRAZIER = new BrazierBlock(10, 2);
+    public static final Block COPPER_BRAZIER = new BrazierBlock(13, 1);
+    public static final Block BLAZE_BRAZIER = new BrazierBlock(15, 3);
 
     public static final Block C_BRICKS = new BrownBlock();
     public static final Block C_CHISELED = new BrownBlock();
@@ -228,13 +228,6 @@ public class Furniture {
     public static final Block STUMP_MOREL  = new MorelStumpBlock();
     public static final Block STUMP_RED  = new RedStumpBlock();
     public static final Block STUMP_BROWN  = new BrownStumpBlock();
-
-    public static final Block HANGING_R = new HangingRedstoneCrystalBlock();
-    public static final Block HANGING_F = new HangingCrystalBlock();
-    public static final Block HANGING_D = new HangingCrystalAltBlock();
-    public static final Block HANGING_E = new HangingCrystalAltBlock();
-    public static final Block HANGING_A = new HangingCrystalAltBlock();
-    public static final Block HANGING_G = new HangingCrystalBlock();
 
     public static final Block KEG = new KegBlock();
 

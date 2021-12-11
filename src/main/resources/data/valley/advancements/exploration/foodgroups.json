@@ -1,0 +1,33 @@
+{
+	"parent": "valley:exploration/commis",
+	"display": {
+		"title": {
+			"text": "I Got Yer Four Basic Food Groups"
+		},
+		"icon": {
+			"item": "valley:grub"
+		},
+		"description": {
+			"text": "Make whatever 'Grub' is."
+		}
+	},
+	"criteria": {
+		"grub": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:grub"
+						]
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"grub"
+		]
+	]
+}

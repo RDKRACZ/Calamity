@@ -6,6 +6,8 @@ import net.linkle.valley.Registry.WeaponsAndTools.Totems.GrowthTotemBase;
 import net.linkle.valley.Registry.WeaponsAndTools.Totems.RainTotemBase;
 import net.linkle.valley.Registry.WeaponsAndTools.Totems.StormTotemBase;
 import net.linkle.valley.Registry.WeaponsAndTools.Totems.SunshineTotemBase;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.SpawnEggItem;
@@ -26,7 +28,7 @@ public class MiscItems {
     public static final Item COPPER_NUGGET = new MiscItemBase(new Item.Settings().group(MISC_GROUP).maxCount(64));
     public static final Item NETHER_NUGGET = new MiscItemBase(new Item.Settings().group(MISC_GROUP).maxCount(64));
     public static final Item SALTPETER = new MiscItemBase(new Item.Settings().group(MISC_GROUP).maxCount(64));
-    public static final Item SQUID_SUCKER = new MiscItemBase(new Item.Settings().group(MISC_GROUP).maxCount(64));
+    public static final Item SQUID_SUCKER = new MiscItemBase(new Item.Settings().group(FISHING_GROUP).food(new FoodComponent.Builder().hunger(4).saturationModifier(0.4f).statusEffect(new StatusEffectInstance(StatusEffects.HUNGER,600), 0.9f).build()).maxCount(64));
     public static final Item FIBER = new MiscItemBase(new Item.Settings().group(MISC_GROUP).maxCount(64));
     public static final Item MOSS_BALL = new MiscItemBase(new Item.Settings().group(MISC_GROUP).maxCount(64));
     public static final Item PUFF_BALL = new MiscItemBase(new Item.Settings().group(MISC_GROUP).maxCount(64));
@@ -50,6 +52,7 @@ public class MiscItems {
     public static final Item HOOK_N = new MiscItemBase(new Item.Settings().group(FISHING_GROUP).maxCount(64).rarity(Rarity.EPIC));
     public static final Item SPRUCE_STICK = new MiscItemBase(new Item.Settings().group(MISC_GROUP).maxCount(64));
     public static final Item COIN = new MiscItemBase(new Item.Settings().group(MISC_GROUP).maxCount(64).rarity(Rarity.UNCOMMON));
+    public static final Item BOOK_COVER = new MiscItemBase(new Item.Settings().group(MISC_GROUP).maxCount(64));
 
     public static void initialize() {
 
@@ -65,6 +68,7 @@ public class MiscItems {
         //register("ameranth", AMERANTH);
         register("saltpeter", SALTPETER);
         register("fiber", FIBER);
+        register("book_cover", BOOK_COVER);
         register("moss_ball", MOSS_BALL);
         register("null_totem", E_TOTEM);
         register("sunshine_totem", S_TOTEM);

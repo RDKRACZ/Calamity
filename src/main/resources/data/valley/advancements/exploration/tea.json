@@ -1,0 +1,96 @@
+{
+	"parent": "valley:exploration/commis",
+	"display": {
+		"title": {
+			"text": "Tea Specialist"
+		},
+		"icon": {
+			"item": "valley:tea_lavender"
+		},
+		"description": {
+			"text": "Drink one of every type of Tea"
+		}
+	},
+	"criteria": {
+		"tea_lavender": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:tea_lavender"
+					]
+				}
+			}
+		},
+		"tea_dandelion": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:tea_dandelion"
+					]
+				}
+			}
+		},
+		"tea_miner": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:tea_miner"
+					]
+				}
+			}
+		},
+		"tea_bb": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:tea_bb"
+					]
+				}
+			}
+		},
+		"tea_sb": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:tea_sb"
+					]
+				}
+			}
+		},
+		"tea": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:tea"
+					]
+				}
+			}
+		}
+	},
+	"requirements": [
+		[
+			"tea_lavender"
+		],
+		[
+			"tea_dandelion"
+		],
+		[
+			"tea_miner"
+		],
+		[
+			"tea_bb"
+		],
+		[
+			"tea_sb"
+		],
+		[
+			"tea"
+		]
+	]
+}

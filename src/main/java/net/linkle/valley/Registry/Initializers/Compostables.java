@@ -1,9 +1,11 @@
 package net.linkle.valley.Registry.Initializers;
 
-import net.minecraft.item.ItemConvertible;
-import net.minecraft.item.Items;
+import static net.linkle.valley.ValleyMain.LOGGER;
 
 import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
+import net.minecraft.item.ItemConvertible;
+import net.minecraft.item.Items;
+import net.minecraft.util.registry.Registry;
 
 /** Registering items for composer block */
 public class Compostables {
@@ -25,24 +27,24 @@ public class Compostables {
         registerItem(Plants.SMALL_CACTUS, levelLow);
         registerItem(Crops.PUFF_SEEDS, levelLow);
         registerItem(Crops.ONION_SEEDS, levelLow);
+        registerItem(Crops.EGGPLANT_SEEDS, levelLow);
+        registerItem(Crops.EGGPLANT_ITEM, levelLow);
         registerItem(Crops.MANDRAKE_SEEDS, levelLow);
         registerItem(Crops.GREEN_BEAN, levelLow);
+        registerItem(Crops.PEPPER_SEEDS, levelLow);
+        registerItem(Crops.PEPPER_ITEM, levelLow);
         registerItem(Crops.GB_SEEDS, levelLow);
         registerItem(MiscItems.FIBER, levelLow);
         registerItem(MiscItems.MOSS_BALL, levelLow);
         registerItem(MiscItems.TURF_ITEM, levelLow);
+        registerItem(Plants.DRY_VINES, levelLow);
         registerItem(Items.STICK, levelLow);
 
         registerItem(Plants.MOREL, levelMed);
         registerItem(Plants.BUSH, levelMed);
-        registerItem(Plants.SNOW_YAM, levelMed);
         registerItem(Crops.SNOW_YAM_ITEM, levelMed);
-        registerItem(Crops.WINTER_ROOT_ITEM, levelMed);
         registerItem(Plants.SNOW_BUSH, levelMed);
-        registerItem(Plants.WINTER_ROOT, levelMed);
         registerItem(Plants.BUSH_ALIVE, levelMed);
-        registerItem(Plants.BUSH_ALIVE_TALL, levelMed);
-        registerItem(Plants.FERNBUSH, levelMed);
         registerItem(Plants.JUNGLE_CAP, levelMed);
         registerItem(Plants.ORANGE_FERN, levelMed);
         registerItem(Plants.MAIZE_CROP, levelMed);
@@ -50,11 +52,10 @@ public class Compostables {
         registerItem(Crops.MINERS_LETTUCE_ITEM, levelMed);
         registerItem(Crops.SNOW_YAM_ITEM, levelMed);
         registerItem(Crops.ONION, levelMed);
-        registerItem(Plants.MOSSY_VINE, levelMed);
+        registerItem(Plants.MOSSY_VINES, levelMed);
         registerItem(Plants.SWAMP_BUSH, levelMed);
         registerItem(Plants.HEDGE, levelMed);
         registerItem(Crops.MANDRAKE, levelMed);
-        registerItem(Plants.BUSH_DEAD_TALL, levelMed);
         registerItem(Plants.TUMBLE_WEED, levelMed);
         registerItem(Plants.APPLE_LEAVES_EMPTY, levelMed);
         registerItem(FoodAndCooking.WORM, levelMed);
@@ -79,7 +80,6 @@ public class Compostables {
         registerItem(Plants.WILD_WHEAT, levelHigh);
         registerItem(Plants.ORANGE_BEAUTY, levelHigh);
         registerItem(Plants.JUNGLE_BUSH, levelHigh);
-        registerItem(Plants.JUNGLE_BUSH, levelHigh);
         registerItem(Crops.COOKED_MANDRAKE, levelHigh);
         registerItem(Items.EGG, levelHigh);
         registerItem(MiscItems.DUCK_EGG, levelHigh);
@@ -87,11 +87,13 @@ public class Compostables {
         registerItem(Items.SALMON, levelHigh);
         registerItem(Items.TROPICAL_FISH, levelHigh);
         registerItem(Furniture.FIBER_BALE, levelHigh);
-
-        registerItem(Plants.AMERANTH_BLOCK, levelVery);
     }
     
     private static void registerItem(ItemConvertible item, float chance) {
+        if (Registry.ITEM.getId(item.asItem()).equals(Registry.ITEM.getDefaultId())) {
+            // TODO: Add warning logs.
+            return;
+        }
         CompostingChanceRegistry.INSTANCE.add(item, chance);
     }
 }

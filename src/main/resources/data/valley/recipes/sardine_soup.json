@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "valley:sardine"
+    },
+    {
+      "item": "valley:mandrake"
+    },
+    {
+      "tag": "c:mollusks"
+    },
+    {
+      "item": "minecraft:potato"
+    },
+    {
+      "item": "valley:milk_bottle"
+    }
+  ],
+  "result": {
+    "item": "valley:sardine_soup",
+    "count": 1
+  }
+}

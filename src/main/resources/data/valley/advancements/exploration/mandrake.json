@@ -1,0 +1,33 @@
+{
+	"parent": "valley:exploration/sickle",
+	"display": {
+		"title": {
+			"text": "Plant or mammal?"
+		},
+		"icon": {
+			"item": "valley:mandrake"
+		},
+		"description": {
+			"text": "Find or grow a Living Mandrake"
+		}
+	},
+	"criteria": {
+		"mandrake": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:mandrake"
+						]
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"mandrake"
+		]
+	]
+}

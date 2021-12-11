@@ -5,11 +5,11 @@
       "item": "valley:raw_tenderloin"
     },
     {
-      "item": "valley:salt"
+      "tag": "c:salt"
     }
   ],
   "result": {
     "item": "valley:bear_jerky",
-    "count": 2
+    "count": 1
   }
 }

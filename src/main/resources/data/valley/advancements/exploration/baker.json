@@ -1,0 +1,33 @@
+{
+	"parent": "valley:exploration/commis",
+	"display": {
+		"title": {
+			"text": "Baker"
+		},
+		"icon": {
+			"item": "valley:brick_furnace"
+		},
+		"description": {
+			"text": "Craft a Brick Stove for your kitchen"
+		}
+	},
+	"criteria": {
+		"stove": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:brick_stove"
+						]
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"stove"
+		]
+	]
+}

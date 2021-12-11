@@ -1,0 +1,31 @@
+{
+	"parent": "valley:exploration/mead",
+	"display": {
+		"title": {
+			"text": "'Inconceivable!'"
+		},
+		"icon": {
+			"item": "valley:potato_juice"
+		},
+		"description": {
+			"text": "Make & drink some Suspicious Juice"
+		}
+	},
+	"criteria": {
+		"suspicious": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:potato_juice"
+					]
+				}
+			}
+		}
+	},
+	"requirements": [
+		[
+			"suspicious"
+		]
+	]
+}

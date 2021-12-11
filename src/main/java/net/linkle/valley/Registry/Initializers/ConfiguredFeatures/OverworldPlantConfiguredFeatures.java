@@ -3,8 +3,7 @@ package net.linkle.valley.Registry.Initializers.ConfiguredFeatures;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.linkle.valley.ValleyMain;
-import net.linkle.valley.Registry.Blocks.Plants.Bushes.BitterBerryBushBlock;
-import net.linkle.valley.Registry.Blocks.Plants.Bushes.TomatoBushBlock;
+import net.linkle.valley.Registry.Blocks.Plants.Bushes.BerryBushBlock;
 import net.linkle.valley.Registry.Initializers.ConfiguredFeatures.Gen.ReedPatchFeature;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.BuiltinRegistries;
@@ -28,13 +27,17 @@ import static net.linkle.valley.ValleyMain.MOD_ID;
 
 import static net.linkle.valley.Registry.Initializers.Plants.*;
 
-@SuppressWarnings("deprecation")
 public class OverworldPlantConfiguredFeatures {
     public static final ReedPatchFeature REED_PATCH = new ReedPatchFeature();    
     
     public static final ConfiguredFeature<?, ?> BUSH_PATCH = Feature.RANDOM_PATCH
             .configure((new RandomPatchFeatureConfig.Builder (new SimpleBlockStateProvider(BUSH
                     .getDefaultState()), SimpleBlockPlacer.INSTANCE)).tries(7).build());
+
+
+    public static final ConfiguredFeature<?, ?> SPROUT_PATCH = Feature.RANDOM_PATCH
+            .configure((new RandomPatchFeatureConfig.Builder (new SimpleBlockStateProvider(SPROUT
+                    .getDefaultState()), SimpleBlockPlacer.INSTANCE)).tries(3).build());
 
     public static final ConfiguredFeature<?, ?> ROSE_PATCH = Feature.RANDOM_PATCH
             .configure((new RandomPatchFeatureConfig.Builder (new SimpleBlockStateProvider(ROSEBUSH
@@ -78,11 +81,11 @@ public class OverworldPlantConfiguredFeatures {
 
     public static final ConfiguredFeature<?, ?> BITTER_PATCH = Feature.RANDOM_PATCH
             .configure((new RandomPatchFeatureConfig.Builder (new SimpleBlockStateProvider(BITTER_BERRY_BUSH
-                    .getDefaultState().with(BitterBerryBushBlock.AGE, 3)), SimpleBlockPlacer.INSTANCE)).tries(2).build());
+                    .getDefaultState().with(BerryBushBlock.AGE, 3)), SimpleBlockPlacer.INSTANCE)).tries(2).build());
 
     public static final ConfiguredFeature<?, ?> TOMATO_PATCH = Feature.RANDOM_PATCH
             .configure((new RandomPatchFeatureConfig.Builder (new SimpleBlockStateProvider(TOMATO_BUSH
-                    .getDefaultState().with(TomatoBushBlock.AGE, 2)), SimpleBlockPlacer.INSTANCE)).tries(1).build());
+                    .getDefaultState().with(BerryBushBlock.AGE, 2)), SimpleBlockPlacer.INSTANCE)).tries(1).build());
 
     public static final ConfiguredFeature<?, ?> SNOW_PATCH = Feature.RANDOM_PATCH
             .configure((new RandomPatchFeatureConfig.Builder (new SimpleBlockStateProvider(SNOW_BUSH
@@ -226,6 +229,11 @@ public class OverworldPlantConfiguredFeatures {
                 new Identifier(MOD_ID, "bush_patch"));
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, bushPatch.getValue(), BUSH_PATCH);
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.BADLANDS_PLATEAU, BiomeKeys.BADLANDS_PLATEAU, BiomeKeys.BAMBOO_JUNGLE_HILLS, BiomeKeys.BAMBOO_JUNGLE,BiomeKeys.BIRCH_FOREST, BiomeKeys.BIRCH_FOREST_HILLS, BiomeKeys.BEACH, BiomeKeys.DESERT_LAKES, BiomeKeys.DESERT_HILLS, BiomeKeys.DESERT, BiomeKeys.DARK_FOREST_HILLS, BiomeKeys.DARK_FOREST, BiomeKeys.DEEP_WARM_OCEAN, BiomeKeys.DEEP_OCEAN, BiomeKeys.DEEP_LUKEWARM_OCEAN, BiomeKeys.ERODED_BADLANDS, BiomeKeys.FLOWER_FOREST, BiomeKeys.FOREST, BiomeKeys.GIANT_SPRUCE_TAIGA_HILLS, BiomeKeys.GIANT_TREE_TAIGA_HILLS, BiomeKeys.GIANT_SPRUCE_TAIGA, BiomeKeys.GIANT_TREE_TAIGA, BiomeKeys.GRAVELLY_MOUNTAINS, BiomeKeys.JUNGLE, BiomeKeys.JUNGLE_EDGE, BiomeKeys.JUNGLE_HILLS,BiomeKeys.MODIFIED_WOODED_BADLANDS_PLATEAU,BiomeKeys.MODIFIED_JUNGLE,BiomeKeys.MODIFIED_BADLANDS_PLATEAU,BiomeKeys.MODIFIED_GRAVELLY_MOUNTAINS,BiomeKeys.MODIFIED_JUNGLE_EDGE,BiomeKeys.OCEAN,BiomeKeys.PLAINS,BiomeKeys.RIVER,BiomeKeys.SHATTERED_SAVANNA_PLATEAU,BiomeKeys.SHATTERED_SAVANNA,BiomeKeys.SAVANNA_PLATEAU,BiomeKeys.SAVANNA,BiomeKeys.SWAMP_HILLS,BiomeKeys.SWAMP,BiomeKeys.STONE_SHORE,BiomeKeys.SUNFLOWER_PLAINS,BiomeKeys.TAIGA_MOUNTAINS,BiomeKeys.TAIGA_HILLS,BiomeKeys.TAIGA,BiomeKeys.TALL_BIRCH_HILLS,BiomeKeys.TALL_BIRCH_FOREST,BiomeKeys.WOODED_MOUNTAINS,BiomeKeys.WOODED_HILLS), GenerationStep.Feature.VEGETAL_DECORATION, bushPatch);
+
+        RegistryKey<ConfiguredFeature<?, ?>> sproutPatch = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
+                new Identifier(MOD_ID, "sprout_patch"));
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, sproutPatch.getValue(), SPROUT_PATCH);
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.BADLANDS_PLATEAU, BiomeKeys.BADLANDS_PLATEAU, BiomeKeys.BAMBOO_JUNGLE_HILLS, BiomeKeys.BAMBOO_JUNGLE,BiomeKeys.BIRCH_FOREST, BiomeKeys.BIRCH_FOREST_HILLS, BiomeKeys.BEACH, BiomeKeys.DESERT_LAKES, BiomeKeys.DESERT_HILLS, BiomeKeys.DESERT, BiomeKeys.DARK_FOREST_HILLS, BiomeKeys.DARK_FOREST, BiomeKeys.DEEP_WARM_OCEAN, BiomeKeys.DEEP_OCEAN, BiomeKeys.DEEP_LUKEWARM_OCEAN, BiomeKeys.ERODED_BADLANDS, BiomeKeys.FLOWER_FOREST, BiomeKeys.FOREST, BiomeKeys.GIANT_SPRUCE_TAIGA_HILLS, BiomeKeys.GIANT_TREE_TAIGA_HILLS, BiomeKeys.GIANT_SPRUCE_TAIGA, BiomeKeys.GIANT_TREE_TAIGA, BiomeKeys.GRAVELLY_MOUNTAINS, BiomeKeys.JUNGLE, BiomeKeys.JUNGLE_EDGE, BiomeKeys.JUNGLE_HILLS,BiomeKeys.MODIFIED_WOODED_BADLANDS_PLATEAU,BiomeKeys.MODIFIED_JUNGLE,BiomeKeys.MODIFIED_BADLANDS_PLATEAU,BiomeKeys.MODIFIED_GRAVELLY_MOUNTAINS,BiomeKeys.MODIFIED_JUNGLE_EDGE,BiomeKeys.OCEAN,BiomeKeys.PLAINS,BiomeKeys.RIVER,BiomeKeys.SHATTERED_SAVANNA_PLATEAU,BiomeKeys.SHATTERED_SAVANNA,BiomeKeys.SAVANNA_PLATEAU,BiomeKeys.SAVANNA,BiomeKeys.SWAMP_HILLS,BiomeKeys.SWAMP,BiomeKeys.STONE_SHORE,BiomeKeys.SUNFLOWER_PLAINS,BiomeKeys.TAIGA_MOUNTAINS,BiomeKeys.TAIGA_HILLS,BiomeKeys.TAIGA,BiomeKeys.TALL_BIRCH_HILLS,BiomeKeys.TALL_BIRCH_FOREST,BiomeKeys.WOODED_MOUNTAINS,BiomeKeys.WOODED_HILLS), GenerationStep.Feature.VEGETAL_DECORATION, sproutPatch);
 
         //found in jungles
         RegistryKey<ConfiguredFeature<?, ?>> junglePatch = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,

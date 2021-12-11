@@ -1,0 +1,308 @@
+{
+	"parent": "valley:exploration/goldbutbetter",
+	"display": {
+		"title": {
+			"text": "Mida's Taste"
+		},
+		"icon": {
+			"item": "valley:glistering_glow_berries"
+		},
+		"description": {
+			"text": "Eat one of every type of golden food"
+		},
+		"frame": "challenge"
+	},
+	"criteria": {
+		"golden_apple": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"minecraft:golden_apple"
+					]
+				}
+			}
+		},
+		"enchanted_golden_apple": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"minecraft:enchanted_golden_apple"
+					]
+				}
+			}
+		},
+		"golden_carrot": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"minecraft:golden_carrot"
+					]
+				}
+			}
+		},
+		"golden_kabob": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:golden_kabob"
+					]
+				}
+			}
+		},
+		"glistering_honeycomb": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:glistering_honeycomb"
+					]
+				}
+			}
+		},
+		"glistering_bitter_berries": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:glistering_bitter_berries"
+					]
+				}
+			}
+		},
+		"glistering_sweet_berries": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:glistering_sweet_berries"
+					]
+				}
+			}
+		},
+		"glistering_spicy_berries": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:glistering_spicy_berries"
+					]
+				}
+			}
+		},
+		"glistering_kelp": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:glistering_kelp"
+					]
+				}
+			}
+		},
+		"glistering_tomato": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:glistering_tomato"
+					]
+				}
+			}
+		},
+		"glistering_onion": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:glistering_onion"
+					]
+				}
+			}
+		},
+		"glistering_potato": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:glistering_potato"
+					]
+				}
+			}
+		},
+		"glistering_beet": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:glistering_beet"
+					]
+				}
+			}
+		},
+		"glistering_green_bean": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:glistering_green_bean"
+					]
+				}
+			}
+		},
+		"glistering_juice": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:glistering_juice"
+					]
+				}
+			}
+		},
+		"glistering_snow_yam": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:glistering_snow_yam"
+					]
+				}
+			}
+		},
+		"glistering_anglerfish": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:glistering_anglerfish"
+					]
+				}
+			}
+		},
+		"glistering_corn": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:glistering_corn"
+					]
+				}
+			}
+		},
+		"glistering_mandrake": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:glistering_mandrake"
+					]
+				}
+			}
+		},
+		"glistering_pepper": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:glistering_pepper"
+					]
+				}
+			}
+		},
+		"glistering_eggplant": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:glistering_eggplant"
+					]
+				}
+			}
+		},
+		"glistering_glow_berries": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:glistering_glow_berries"
+					]
+				}
+			}
+		}
+	},
+	"requirements": [
+		[
+			"golden_apple"
+		],
+		[
+			"golden_apple"
+		],
+		[
+			"enchanted_golden_apple"
+		],
+		[
+			"golden_carrot"
+		],
+		[
+			"golden_kabob"
+		],
+		[
+			"glistering_honeycomb"
+		],
+		[
+			"glistering_bitter_berries"
+		],
+		[
+			"glistering_sweet_berries"
+		],
+		[
+			"glistering_spicy_berries"
+		],
+		[
+			"glistering_kelp"
+		],
+		[
+			"glistering_tomato"
+		],
+		[
+			"glistering_onion"
+		],
+		[
+			"glistering_potato"
+		],
+		[
+			"glistering_beet"
+		],
+		[
+			"glistering_green_bean"
+		],
+		[
+			"glistering_glow_berries"
+		],
+		[
+			"glistering_juice"
+		],
+		[
+			"glistering_snow_yam"
+		],
+		[
+			"glistering_anglerfish"
+		],
+		[
+			"glistering_corn"
+		],
+		[
+			"glistering_mandrake"
+		],
+		[
+			"glistering_pepper"
+		],
+		[
+			"glistering_eggplant"
+		]
+	]
+}

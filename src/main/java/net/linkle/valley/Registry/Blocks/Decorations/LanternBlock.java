@@ -22,15 +22,16 @@ public class LanternBlock extends HorizontalWithWaterBlock {
     public LanternBlock(int luminance, boolean emitsRedstone) {
         super(FabricBlockSettings.of(Material.METAL)
                 .breakByHand(true)
-                .sounds(BlockSoundGroup.CHAIN).luminance(luminance)
+                .sounds(BlockSoundGroup.CHAIN)
+                .luminance(luminance)
                 .strength(1f, 3.5f));
-        setDefaultState(stateManager.getDefaultState().with(WATERLOGGED, false).with(FACING, Direction.NORTH));
+        setDefaultState();
         this.emitsRedstone = emitsRedstone;
     }
     
     @Override
     protected Direction getFacing(ItemPlacementContext ctx) {
-        return getSideElseUserFacing(ctx, true);
+        return getSideElseUserFacing(ctx);
     }
     
     @Override
